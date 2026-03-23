@@ -1,6 +1,1 @@
-l = [12, 13, 45, 65, 67, 89]
-# print(l)
-
-# l = [12, 13, 45, 65, 67, 89]
-# l.append(34)
-# print(l)
+dict["city"] = "giridih"

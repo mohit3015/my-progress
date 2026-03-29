@@ -1,48 +1,68 @@
 
-# Q1: Create a class Mobile:*********************************************************************
-# brand******************************************************************************************
-# price*****************************************************************************************
-# function show()*********************************************************************************
+# # Q1: Create a class Mobile:*********************************************************************
+# # brand******************************************************************************************
+# # price*****************************************************************************************
+# # function show()*********************************************************************************
 
-class Mobile:
-    def __init__(self, brand, price):
-        self.brand = brand
-        self.price = price
+# class Mobile:
+#     def __init__(self, brand, price):
+#         self.brand = brand
+#         self.price = price
     
-    def show(self):
-        print("Brand :", self.brand)
-        print("Price :", self.price)
+#     def show(self):
+#         print("Brand :", self.brand)
+#         print("Price :", self.price)
 
-# Object banao
-m1 = Mobile("Samsung", 15000)
-m1.show()
+# # Object banao
+# m1 = Mobile("Samsung", 15000)
+# m1.show()
 
-print("-------------------")
+# print("-------------------")
 
-m2 = Mobile("iPhone", 80000)
-m2.show()
+# m2 = Mobile("iPhone", 80000)
+# m2.show()
 
-# Q2: Create 2 objects:*************************************************************************
-# BMW***************************************************************************************
-# Audi***************************************************************************************
+# # Q2: Create 2 objects:*************************************************************************
+# # BMW***************************************************************************************
+# # Audi***************************************************************************************
 
-class car:
-    def __init__(self, brand, price):
-        self.brand = brand
-        self.price = price
+# class car:
+#     def __init__(self, brand, price):
+#         self.brand = brand
+#         self.price = price
         
-    def show(self):
-        print("Brand :", self.brand )
-        print("Price :", self.price)
+#     def show(self):
+#         print("Brand :", self.brand )
+#         print("Price :", self.price)
         
-# object 1 - BMW
-c1 = car("BMW", 50000000)
+# # object 1 - BMW
+# c1 = car("BMW", 50000000)
 
-# object 2 - Audi
-c2 = car("Audi", 60000000)
+# # object 2 - Audi
+# c2 = car("Audi", 60000000)
 
-print("=====Car - 1 =====")
-c1.show()
+# print("=====Car - 1 =====")
+# c1.show()
 
-print("====Car - 2 ======")
-c2.show()
+# print("====Car - 2 ======")
+# c2.show()
+
+
+class person:
+    # name = "Mohit"
+    # occ = "Developer"
+    
+    def __init__(self, name, occ):
+        self.name = name
+        self.occ = occ
+    
+    def info(self):
+        print(f"{self.name} is a {self.occ}")
+        
+        # print(self.name)
+        # print(self.occ)
+   
+a = person("Mohit", "Developer")
+b = person("Sulekha", "Doctor")
+a.info()
+b.info()

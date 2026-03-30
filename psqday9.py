@@ -76,7 +76,7 @@ class Employee:
     def showDetails(self):
         print(f"The name of Employee: {self.id} is {self.name}")
 
-class Programmer(Employee):
+class Programmer(Employee):                     # Single Inheritance(parent one and child one) 
     
     def __init__(self, name, id):
         self.id = id
@@ -85,7 +85,7 @@ class Programmer(Employee):
     def showLangauge(self):
         print(f"The default langauge is python. id is {self.id} and name {self.name}")
         
-class Subject(Programmer):
+class Subject(Programmer):                      # Hierarchical Inheritance(one parent multiple child)
     def __init__(self, name, id):
         self.id = id
         self.name = name
@@ -99,3 +99,63 @@ e2 = Programmer("Munna kumar", 1508)
 e2.showLangauge()
 e3 = Subject("Mohit kumar", 3015)
 e3.showSubject()
+
+
+class Math:                                       # Staticmethod
+    def __init__(self, num):
+        self.num = num
+        
+    def addtonum(self, n):
+        self.num = self.num + n
+        
+    @staticmethod
+    def add(a, b):
+        return a + b
+    
+a = Math(5)
+print(a.num)
+a.addtonum(6)
+print(a.num)
+
+
+# class methoda alternative
+
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+        
+    @classmethod
+    def fromStr(cls, string):
+        return cls(string.split("-")[0], string.split("-")[1])
+    
+e1 = Employee("Mohit", 30000)
+print(e1.name)
+print(e1.salary)
+
+string = "Munna-32000"
+e2 = Employee.fromStr(string)
+print(e2.name)
+print(e2.salary)
+
+
+class shape:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def area(self):
+        return self.x * self.y
+    
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+        
+    def area(self):
+        return 3.14 * self.radius *self.radius
+    
+rec = Circle(5)  
+print(rec.area())
+    
+rec = shape(3, 4)
+print(rec.area())
